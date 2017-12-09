@@ -10,7 +10,6 @@
 <h1>
 	Hello world!  
 </h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+<p><a href="${pageContext.request.contextPath}/lectures">Show currnet lectures</a></p>
 </body>
 </html>
