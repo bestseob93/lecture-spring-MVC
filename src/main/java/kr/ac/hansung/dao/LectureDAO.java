@@ -71,6 +71,7 @@ public class LectureDAO {
 	}
 	
 	public boolean insert(Lecture lecture) {
+		System.out.println(lecture);
 		String years = lecture.getYears();
 		String semester = lecture.getSemester();
 		String classCode = lecture.getClass_code();

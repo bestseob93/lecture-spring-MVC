@@ -17,5 +17,7 @@ public class LectureService {
 		
 		return lectureDAO.getLectures();
 	}
-
+	public void insert(Lecture lecture) {
+		lectureDAO.insert(lecture);		
+	}
 }

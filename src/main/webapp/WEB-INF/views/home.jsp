@@ -10,6 +10,7 @@
 <h1>
 	Hello world!  
 </h1>
-<p><a href="${pageContext.request.contextPath}/lectures">Show currnet lectures</a></p>
+	<p><a href="${pageContext.request.contextPath}/lectures">Show currnet lectures</a></p>
+	<p><a href="${pageContext.request.contextPath}/createlecture">Add a new lectures</a></p>
 </body>
 </html>
