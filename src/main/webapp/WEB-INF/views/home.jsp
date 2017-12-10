@@ -15,7 +15,7 @@
 			<p>${pageContext.request.userPrincipal.name}님!</p>
 		</div>
 		<div class="section">
-			<a href="${pageContext.request.contextPath}/lectures">학기별 이수 학점 조회</a>
+			<a href="${pageContext.request.contextPath}/semesterlectures">학기별 이수 학점 조회</a>
 		</div>
 		<div class="section">
 			<a href="${pageContext.request.contextPath}/lectures">이수 구분별 학점 조회</a>

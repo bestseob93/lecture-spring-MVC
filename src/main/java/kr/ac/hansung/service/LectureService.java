@@ -6,17 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.ac.hansung.dao.LectureDAO;
+import kr.ac.hansung.model.DivisionGrade;
 import kr.ac.hansung.model.Lecture;
+import kr.ac.hansung.model.SemesterLecture;
 
 @Service
 public class LectureService {
 
 	@Autowired
 	private LectureDAO lectureDAO;
-	public List<Lecture> getCurrent() {
+	public List<Lecture> getCurrent(String username) {
 		
-		return lectureDAO.getLectures();
+		return lectureDAO.getLectures(username);
 	}
+	
+	public List<SemesterLecture> getSemseter(String username) {
+		return lectureDAO.getSemesterLectures(username);
+	}
+	
+	public List<DivisionGrade> getDivision(String username) {
+		return lectureDAO.getDivisionGrades(username);
+	}
+	
 	public void insert(Lecture lecture) {
 		lectureDAO.insert(lecture);		
 	}

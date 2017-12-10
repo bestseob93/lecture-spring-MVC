@@ -16,7 +16,9 @@
 	</security:authentication-manager>
 	<security:http auto-config="true" use-expressions="true">
 		<security:intercept-url pattern="/" access="isAuthenticated()" />
-		<security:intercept-url pattern="/lectures" access="permitAll" />
+		<security:intercept-url pattern="/lectures" access="isAuthenticated()" />
+		<security:intercept-url pattern="/semesterlectures" access="isAuthenticated()" />
+		<security:intercept-url pattern="/divisiongrade" access="isAuthenticated()" />
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/logout" access="permitAll" />
 		<security:intercept-url pattern="/createlecture" access="isAuthenticated()" />
