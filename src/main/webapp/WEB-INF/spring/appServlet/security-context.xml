@@ -19,6 +19,7 @@
 		<security:intercept-url pattern="/lectures" access="isAuthenticated()" />
 		<security:intercept-url pattern="/semesterlectures" access="isAuthenticated()" />
 		<security:intercept-url pattern="/divisiongrade" access="isAuthenticated()" />
+		<security:intercept-url pattern="/semesterdetail" access="isAuthenticated()" />
 		<security:intercept-url pattern="/login" access="permitAll" />
 		<security:intercept-url pattern="/logout" access="permitAll" />
 		<security:intercept-url pattern="/createlecture" access="isAuthenticated()" />

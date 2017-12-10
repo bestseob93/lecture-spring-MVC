@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+<title>등록완료</title>
 </head>
 <body>
 

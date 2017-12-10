@@ -29,10 +29,10 @@ public class LectureDAO {
 		return jdbcTemplate.queryForObject(sqlStatement, Integer.class);
 	}
 	
-	public Lecture getLecture(String className) {
-		String sqlStatement = "select * from lecture where class_name = ?";
+	public List<Lecture> getLecture(String username, String years, String semester) {
+		String sqlStatement = "select * from lecture where username=? and years=? and semester=?";
 		
-		return jdbcTemplate.queryForObject(sqlStatement, new Object[] {className}, 
+		return jdbcTemplate.query(sqlStatement, new Object[] {username, years, semester}, 
 					new RowMapper<Lecture>() {
 
 						public Lecture mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -45,15 +45,14 @@ public class LectureDAO {
 							lecture.setClass_name(rs.getString("class_name"));
 							lecture.setDivision(rs.getString("division"));
 							lecture.setGrades(rs.getString("grades"));
-							lecture.setUsername(rs.getString("username"));
 							
 							return lecture;
 						}
 		});
 	}
-	//query and return multiple objects
+	//query and return multiple objects , 18-1학기 조
 	public List<Lecture> getLectures(String username) {
-		String sqlStatement = "select * from lecture where username=?";
+		String sqlStatement = "select * from lecture where username=? and years=2018 and semester=1";
 		
 		return jdbcTemplate.query(sqlStatement, new Object[] {username}, 
 				new RowMapper<Lecture>() {
@@ -89,8 +88,6 @@ public class LectureDAO {
 						semesterLecture.setSemester(rs.getString("semester"));
 						semesterLecture.setTotalgrades(rs.getString("total_grade"));
 						
-						System.out.println("===============");
-						System.out.println(semesterLecture);
 						return semesterLecture;
 					}
 		});
@@ -105,7 +102,7 @@ public class LectureDAO {
 						DivisionGrade divisionGrade = new DivisionGrade();
 						
 						divisionGrade.setDivision(rs.getString("division"));
-						divisionGrade.setDivision(rs.getString("total_grade"));
+						divisionGrade.setTotalgrades(rs.getString("total_grade"));
 						
 						return divisionGrade;
 					}

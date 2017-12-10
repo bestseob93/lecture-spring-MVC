@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>수강 신청 하기</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/create.css">
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 </head>
 <body>
 	<div class="wrapper">
 		<sf:form class="create" method="POST" action="${pageContext.request.contextPath}/docreate" modelAttribute="lecture">
-			<p class="title">수강 신청하기</p>
+			<p class="title">2018-1학기 수강 신청하기</p>
 			<sf:input type="text" placeholder="years" path='years' />
 			<div class="error-msg">
 				<sf:errors path="years" />

@@ -15,6 +15,10 @@ public class LectureService {
 
 	@Autowired
 	private LectureDAO lectureDAO;
+	
+	public List<Lecture> getDetail(String username, String years, String semester) {
+		return lectureDAO.getLecture(username, years, semester);
+	}
 	public List<Lecture> getCurrent(String username) {
 		
 		return lectureDAO.getLectures(username);

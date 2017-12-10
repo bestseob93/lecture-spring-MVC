@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 <title>Home</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 </head>
@@ -18,13 +19,13 @@
 			<a href="${pageContext.request.contextPath}/semesterlectures">학기별 이수 학점 조회</a>
 		</div>
 		<div class="section">
-			<a href="${pageContext.request.contextPath}/lectures">이수 구분별 학점 조회</a>
+			<a href="${pageContext.request.contextPath}/divisiongrade">이수 구분별 학점 조회</a>
 		</div>
 		<div class="section">
-			<a href="${pageContext.request.contextPath}/createlecture">수강 신청하기</a>
+			<a href="${pageContext.request.contextPath}/createlecture">다음 학기 수강 신청하기</a>
 		</div>
 		<div class="section">
-			<a href="${pageContext.request.contextPath}/lectures">신청 내역 조회</a>
+			<a href="${pageContext.request.contextPath}/lectures">18-1학기 신청 내역 조회</a>
 		</div>
 	</div>
 	<c:if test="${pageContext.request.userPrincipal.name != null}">
