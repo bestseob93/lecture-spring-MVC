@@ -9,12 +9,13 @@
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 <title>수강 신청한 과목</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/table.css" />
->
+
 </head>
 <body>
 
 	<div class="table-title">
 		<h3>${pageContext.request.userPrincipal.name}님의 학기별 이수 학점입니다</h3>
+		<a href="${pageContext.request.contextPath}">홈으로 가기</a>
 	</div>
 	<table class="table-fill">
 		<thead>

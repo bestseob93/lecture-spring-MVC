@@ -16,6 +16,7 @@
 <body onload="getTotal()">
 	<div class="table-title">
 		<h3>${pageContext.request.userPrincipal.name}님의 이수 구분별 학점입니다</h3>
+		<a href="${pageContext.request.contextPath}">홈으로 가기</a>
 	</div>
 	<table class="table-fill division-table">
 		<thead>
