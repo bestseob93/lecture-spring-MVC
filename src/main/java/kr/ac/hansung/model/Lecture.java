@@ -32,5 +32,6 @@ public class Lecture {
 	private String division;
 	@NotEmpty(message="grades cannot be empty")
 	private String grades;
+	private String username;
 }
 

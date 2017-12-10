@@ -5,36 +5,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/login.css">
 </head>
 <body onload='document.f.username.focus();'>
-	<h3>Login with Username and Password</h3>
-	<form name='f' action="<c:url value="/login"/>" method='POST'>
-		<c:if test="${not empty logoutMsg}">
-			<div style="color: #0000ff">
-				<h3>${logoutMsg}</h3>
-			</div>
-		</c:if>
-		<c:if test="${not empty errorMsg}">
-			<div style="color: #ff0000">
-				<h3>${errorMsg}</h3>
-			</div>
-		</c:if>
-		<table>
-			<tr>
-				<td>User:</td>
-				<td><input type='text' name='username' value=''></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type='password' name='password' /></td>
-			</tr>
-			<tr>
-				<td colspan='2'><input name="submit" type="submit"
-					value="Login" /></td>
-			</tr>
-			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-		</table>
-	</form>
+	<div class="wrapper">
+		<form class="login" name='f' action="<c:url value="/login"/>"
+			method='POST'>
+			<p class="title">Log in</p>
+			<input type="text" placeholder="Username" autofocus name='username' />
+			<i class="fa fa-user"></i>
+			<input type="password" placeholder="Password" name='password' />
+			<i class="fa fa-key"></i>
+			<c:if test="${not empty logoutMsg}">
+				<div class="logout-msg">
+					<p>${logoutMsg}</p>
+				</div>
+			</c:if>
+			<c:if test="${not empty errorMsg}">
+				<div class="error-msg">
+					<p>${errorMsg}</p>
+				</div>
+			</c:if>
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+			<button type="submit">
+				<i class="spinner"></i> <span class="state">Log in</span>
+			</button>
+		</form>
+	</div>
+	<script src="https://use.fontawesome.com/861760522b.js"></script>
 </body>
 </html>

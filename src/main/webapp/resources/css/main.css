@@ -1,1 +1,87 @@
 @charset "UTF-8";
+
+html {
+  background-color: rgba(4, 40, 68, 0.85);
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+	display: flex;
+	flex: 1;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	flex: 1;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;	
+}
+
+a:visited {
+	color: #fff;
+}
+
+.section a, .section p {
+	color: #fff;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.container div.section {
+	background-color: white;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+div.section:first-child {
+	background-color: #8C74A0;
+	flex-direction: column;
+}
+
+div.section:nth-child(2) {
+	background-color: #C686AF;
+}
+
+div.section:nth-child(3) {
+	background-color: #F6B7C7;
+}
+
+div.section:nth-child(4) {
+	background-color: #FCCDBD;
+}
+
+div.section:nth-child(5) {
+	background-color: #FDEFC5;
+}
+
+.logout-btn {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	border-radius: 50px;
+	background-color: #fff;
+	bottom: 50px;
+	right: 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.logout-btn i {
+	color: #000;
+	font-size: 50px;
+	width: inherit;
+	line-height: 100px;
+	vertical-align: middle;
+}

@@ -43,6 +43,7 @@ public class LectureDAO {
 							lecture.setClass_name(rs.getString("class_name"));
 							lecture.setDivision(rs.getString("division"));
 							lecture.setGrades(rs.getString("grades"));
+							lecture.setUsername(rs.getString("username"));
 							
 							return lecture;
 						}
@@ -64,6 +65,7 @@ public class LectureDAO {
 							lecture.setClass_name(rs.getString("class_name"));
 							lecture.setDivision(rs.getString("division"));
 							lecture.setGrades(rs.getString("grades"));
+							lecture.setUsername(rs.getString("username"));
 							
 							return lecture;
 						}
@@ -78,12 +80,13 @@ public class LectureDAO {
 		String className = lecture.getClass_name();
 		String division = lecture.getDivision();
 		String grades = lecture.getGrades();
+		String username = lecture.getUsername();
 		
-		String sqlStatement = "insert into lecture (years, semester, class_code, class_name, division, grades)"
-								+ " values (?, ?, ?, ?, ?, ?)";
+		String sqlStatement = "insert into lecture (years, semester, class_code, class_name, division, grades, username)"
+								+ " values (?, ?, ?, ?, ?, ?, ?)";
 		
 		return (jdbcTemplate.update(sqlStatement,
-					new Object [] {years, semester, classCode, className, division, grades}) == 1);
+					new Object [] {years, semester, classCode, className, division, grades, username}) == 1);
 	}
 	
 	public boolean update(Lecture lecture) {

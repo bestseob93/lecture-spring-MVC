@@ -6,24 +6,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/create.css">
 </head>
 <body>
-	<sf:form method="POST" action="${pageContext.request.contextPath}/docreate" modelAttribute="lecture">
-		<p><span>Year: </span><sf:input type="text" path="years"/></p>
-		<p><sf:errors path="years" /></p>
-		<p><span>Semester: </span><sf:input type="text" path="semester"/></p>
-		<p><sf:errors path="semester" /></p>
-		<p><span>ClassCode: </span><sf:input type="text" path="class_code"/></p>
-		<p><sf:errors path="class_code" /></p>
-		<p><span>ClassName: </span><sf:input type="text" path="class_name"/></p>
-		<p><sf:errors path="class_name" /></p>
-		<p><span>Division: </span><sf:input type="text" path="division"/></p>
-		<p><sf:errors path="division" /></p>
-		<p><span>Grades: </span><sf:input type="text" path="grades"/></p>
-		<p><sf:errors path="grades" /></p>
-		<p><input type="submit" value="등록"/></p>
-	</sf:form>
+	<div class="wrapper">
+		<sf:form class="create" method="POST" action="${pageContext.request.contextPath}/docreate" modelAttribute="lecture">
+			<p class="title">수강 신청하기</p>
+			<sf:input type="text" placeholder="years" path='years' />
+			<div class="error-msg">
+				<sf:errors path="years" />
+			</div>
+			<sf:input type="text" placeholder="semester" path='semester' />
+			<div class="error-msg">
+				<sf:errors path="semester" />
+			</div>
+			<sf:input type="text" placeholder="classCode" path='class_code' />
+			<div class="error-msg">
+				<sf:errors path="class_code" />
+			</div>
+			<sf:input type="text" placeholder="className" path='class_name' />
+			<div class="error-msg">
+				<sf:errors path="class_name" />
+			</div>
+			<sf:input type="text" placeholder="division" path='division' />
+			<div class="error-msg">
+				<sf:errors path="division" />
+			</div>
+			<sf:input type="text" placeholder="grades" path='grades' />
+			<div class="error-msg">
+				<sf:errors path="grades" />
+			</div>
+			<sf:input type="hidden" path="username" value="${pageContext.request.userPrincipal.name}"/>
+			<button type="submit">등록</button>
+		</sf:form>
+	</div>
 
 </body>
 </html>
